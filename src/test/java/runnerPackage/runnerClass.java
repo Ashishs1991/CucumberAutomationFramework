@@ -9,8 +9,10 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features= {"C:\\Users\\Ashish Sharma\\"
 				+ "eclipse-workspace\\TestFramework\\"
-				+ "src\\test\\java\\featureFiles\\test.feature"},
-		glue= {"stepDefinations"}		
+				+ "src\\test\\java\\featureFiles"},
+//		format= {"preety","html:html_test_output"},
+		glue= {"stepDefinations"},	
+		tags= {"@smoke,@smoke1"}
 		)
 
 
