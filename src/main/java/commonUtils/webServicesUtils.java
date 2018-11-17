@@ -51,8 +51,4 @@ public class webServicesUtils {
 		responseJSONArray=new JSONArray(responeString); 
 		return responseJSONArray;
 	}
-	
-	
-	
-
 }
