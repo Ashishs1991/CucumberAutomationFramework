@@ -12,7 +12,7 @@ import cucumber.api.junit.Cucumber;
 				+ "src\\test\\java\\featureFiles"},
 //		format= {"preety","html:html_test_output"},
 		glue= {"stepDefinations"},	
-		tags= {"@smoke,@smoke1"}
+		tags= {"@sanity"}
 		)
 
 

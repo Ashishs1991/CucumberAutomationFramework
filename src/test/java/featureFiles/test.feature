@@ -17,3 +17,14 @@ Examples:
 	| username | password |
 	| ashish   | ash123   |
 	| anisha   | ani123   |
+
+@sanity
+Scenario: This is the test scenario for data tables
+Given We have the data tables 
+	| testCase1 | Data1 |
+	| testCase2 | Data2 |
+	| testCase3 | Data3 |
+	| testCase4 | Data1 |
+When we have a test when for the data tables scenario
+Then we have the test data table then 
+
