@@ -10,7 +10,7 @@ public class readPropertyFile {
 	
 	File file;
 	FileInputStream fis;
-	Properties prop;
+	public Properties prop;
 	
 	
 	public readPropertyFile() throws IOException {

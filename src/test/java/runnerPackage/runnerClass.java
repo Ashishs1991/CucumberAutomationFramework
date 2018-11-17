@@ -11,8 +11,8 @@ import cucumber.api.junit.Cucumber;
 				+ "eclipse-workspace\\TestFramework\\"
 				+ "src\\test\\java\\featureFiles"},
 //		format= {"preety","html:html_test_output"},
-		glue= {"stepDefinations"},	
-		tags= {"@sanity"}
+		glue= {"stepDefinations"}
+//		tags= {"@sanity"}
 		)
 
 
