@@ -30,6 +30,7 @@ public class webServicesStepDefs {
 	public void we_have_valid_URI(String URL) throws ClientProtocolException, IOException {
 		URI=rea.prop.getProperty("BaseURL").concat(URL);
 		ws =new webServicesUtils(URI);
+		ws.createConnection();
 		ws.get();
 	}
 	

@@ -1,7 +1,9 @@
 package commonUtils;
 
 import java.io.IOException;
+import java.util.HashMap;
 
+import org.apache.http.Header;
 import org.apache.http.ParseException;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -22,7 +24,7 @@ public class webServicesUtils {
 	JSONObject responseJSON;
 	JSONArray responseJSONArray;
 	String responeString;
-	
+	HashMap<String,String> headerMap =new HashMap<String, String>();
 	public webServicesUtils(String URL) {
 		this.URL=URL;
 	}
@@ -51,4 +53,31 @@ public class webServicesUtils {
 		responseJSONArray=new JSONArray(responeString); 
 		return responseJSONArray;
 	}
+	
+	public CloseableHttpResponse getResponse() {
+		return closeableResponse;
+	}
+	
+	//This Will put all the headers in a Map.
+	public HashMap<String,String> getAllHeadersInMap() {
+		Header[] headersArray=closeableResponse.getAllHeaders();
+		for(Header head : headersArray) {
+			headerMap.put(head.getName(), head.getValue());
+		}
+		if(headerMap.size()>0) {
+			return headerMap;
+		}
+		return null;
+	}
+	
+	//This will return the value off a particular header
+	public String getHeaderValue(String headerName) {
+		return headerMap.get(headerName);
+	}
+	
+	public void getValueByJPath(String JPath) {
+		
+	}
+	
+	
 }
